@@ -1,13 +1,17 @@
+
 public class HelloWorld {
-	public static void main(String[] args){
-		System.out.println("Hello, World");
-		String p = "qwe";						//инициализация ссылки при создании
-		String r = new String("rty");			//определение ссылки, присоединение к объекту, фактически создание нового объекта
-		System.out.printf("%s%s",p,r);			//printf() is primarily needed when you need to print big strings to avoid string concatenation in println() which can be confusing at times
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Hello world!");
+		String p = "qwe";	//РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ СЃСЃС‹Р»РєРё РїСЂРё СЃРѕР·РґР°РЅРёРё
+		String r = new String("rty");	//РѕРїСЂРµРґРµР»РµРЅРёРµ СЃСЃС‹Р»РєРё, РїСЂРёСЃРѕРµРґРёРЅРµРЅРёРµ Рє РѕР±СЉРµРєС‚Сѓ, С„Р°РєС‚РёС‡РµСЃРєРё СЃРѕР·РґР°РЅРёРµ РЅРѕРІРѕРіРѕ РѕР±СЉРµРєС‚Р°
+		System.out.printf("%s%s",p,r);	//printf() is primarily needed when you need to print big strings to avoid string concatenation in println() which can be confusing at times
 		System.out.print("\n" + p + r + "\n");	//println() prints a new blank line and then your message
 		boolean a = true;
 		char b = 'b';
-		byte c = -127;
+		byte c = -128;
+		c--;	//no boundary error, returns 127, goes in a circle
 		short d = 32767;
 		int e = -2147483648;
 		long f =  Long.MAX_VALUE;	//2^31
@@ -15,25 +19,30 @@ public class HelloWorld {
 		float g = Float.MIN_VALUE;	//0xff7fffff
 		System.out.println(g);
 		double h = Double.MAX_VALUE;
-		System.out.println(h);
+		System.out.println("Double type max value is " + h);
 		
-		class DataOnly {	//создание класса, который ничего не делает, кроме хранения данных
-			int i;	//создание ссылки
+		class DataOnly {	//СЃРѕР·РґР°РЅРёРµ РєР»Р°СЃСЃР°, РєРѕС‚РѕСЂС‹Р№ РЅРёС‡РµРіРѕ РЅРµ РґРµР»Р°РµС‚, РєСЂРѕРјРµ С…СЂР°РЅРµРЅРёСЏ РґР°РЅРЅС‹С…
+			int i;	//СЃРѕР·РґР°РЅРёРµ СЃСЃС‹Р»РєРё
 			boolean k;
 		}
-		DataOnly data = new DataOnly(); //создание объекта класса за его пределами
-		data.i = 47;	//обращение к члену класса, присваивание значения полю класса
-		System.out.print(data.k);	//вывод значения по умолчанию примитивного типа данных
+		
+		DataOnly data = new DataOnly();	//СЃРѕР·РґР°РЅРёРµ РѕР±СЉРµРєС‚Р° РєР»Р°СЃСЃР° Р·Р° РµРіРѕ РїСЂРµРґРµР»Р°РјРё
+		data.i = 47;	//РѕР±СЂР°С‰РµРЅРёРµ Рє С‡Р»РµРЅСѓ РєР»Р°СЃСЃР°, РїСЂРёСЃРІР°РёРІР°РЅРёРµ Р·РЅР°С‡РµРЅРёСЏ РїРѕР»СЋ РєР»Р°СЃСЃР°
+		System.out.print(data.k);	//РІС‹РІРѕРґ Р·РЅР°С‡РµРЅРёСЏ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РїСЂРёРјРёС‚РёРІРЅРѕРіРѕ С‚РёРїР° РґР°РЅРЅС‹С…
 		flag();
-
+		
 	}
-	static boolean flag(){		//создание метода, способного возвратить Булево значение. 
-								//Метод ничего не принимает на вход.N.B.создается за пределами main-метода
-		System.out.print("\nMethod output occurs");	//вывод на экран не значит возврат значения метода
-		//flag();		//лол, метод может вызывать сам себя - StackOverflowError
-		return true;	//возвращает возможное Булево значение
+	
+	
+	static boolean flag() {	//СЃРѕР·РґР°РЅРёРµ РјРµС‚РѕРґР°, СЃРїРѕСЃРѕР±РЅРѕРіРѕ РІРѕР·РІСЂР°С‚РёС‚СЊ Р‘СѓР»РµРІРѕ Р·РЅР°С‡РµРЅРёРµ. РњРµС‚РѕРґ РЅРёС‡РµРіРѕ РЅРµ РїСЂРёРЅРёРјР°РµС‚ РЅР° РІС…РѕРґ.N.B.СЃРѕР·РґР°РµС‚СЃСЏ Р·Р° РїСЂРµРґРµР»Р°РјРё main-РјРµС‚РѕРґР°
+		System.out.print("\nMethod output occurs"); //РІС‹РІРѕРґ РЅР° СЌРєСЂР°РЅ РЅРµ Р·РЅР°С‡РёС‚ РІРѕР·РІСЂР°С‚ Р·РЅР°С‡РµРЅРёСЏ РјРµС‚РѕРґР°
+		//flag();	//Р»РѕР», РјРµС‚РѕРґ РјРѕР¶РµС‚ РІС‹Р·С‹РІР°С‚СЊ СЃР°Рј СЃРµР±СЏ - StackOverflowError
+		return true; //РІРѕР·РІСЂР°С‰Р°РµС‚ РІРѕР·РјРѕР¶РЅРѕРµ Р‘СѓР»РµРІРѕ Р·РЅР°С‡РµРЅРёРµ
 	}
-	void nothing(){		//метод возвращает void
-		//flag();
+		
+	void nothing() {	//РјРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ void
+		//flag;
 	}
+	
 }
+
