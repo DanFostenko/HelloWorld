@@ -26,12 +26,12 @@ public class HelloWorld3 {
         System.out.println(result);
 
         //вызов перегруженных методов
-        int methodresult;
-        methodresult = getSum(1, 10);
-        System.out.println(methodresult);
+        int methodResult;
+        methodResult = getSum(1, 10);
+        System.out.println(methodResult);
 
-        methodresult = getSum(5, 100, 66);
-        System.out.println(methodresult);
+        methodResult = getSum(5, 100, 66);
+        System.out.println(methodResult);
 
         sayHello("Petya");
         sayHello("Vasya", "Vanya");
