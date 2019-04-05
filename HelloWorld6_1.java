@@ -20,4 +20,8 @@ public class HelloWorld6_1 {
     public void sleep() {
         System.out.println("Zzzz");
     }
+    //полиморфизм - способность объектов с одинаковаой спецификацией иметь различную реализацию
+    public void sound() {
+        System.out.println("Hello");
+    }
 }

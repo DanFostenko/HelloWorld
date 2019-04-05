@@ -1,4 +1,5 @@
 package mypackage;
+//TestClass
 //наследование
 public class HelloWorld6 {
     public static void main(String[] args) {
@@ -28,6 +29,9 @@ public class HelloWorld6 {
 
 //        dog.weight = 2; нет прямого доступа к приватной переменной
         System.out.println(dog.getWeight()); //доступ к приватной переменной через метод get
+
+        dog.sound();
+        cat.sound();
 
     }
 }
