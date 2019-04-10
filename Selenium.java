@@ -1,20 +1,24 @@
 package mypackage;
 
-//import org.openqa.selenium.WebDriver;
-//import org.openqa.selenium.firefox.FIrefoxDriver;
-//import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Selenium {
     public static void main(String[] args) {
-        /*System.setProperty("webdriver.gecko.driver", "C:\\Users\\bfostenko\\IdeaProjects\\TestProject\\drivers\\geckodriver.exe");
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\bfostenko\\IdeaProjects\\TestProject\\drivers\\chromedriver.exe");
+        System.setProperty("webdriver.gecko.driver", "C:\\Users\\bfostenko\\IdeaProjects\\TestProject\\drivers\\geckodriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\bfostenko\\IdeaProjects\\testselenium\\drivers\\chromedriver.exe");
 
-        WebDriver driver = new FirefoxDriver();
-        driver.get("https://www.seleniumhq.org");
+        WebDriver driver1 = new FirefoxDriver();
+        driver1.manage().window().maximize();
+        driver1.get("https://www.seleniumhq.org");
 
-        WebDriver driver=new ChromeDriver();
-        driver.get("https://www.seleniumhq.org");
+        WebDriver driver2 = new ChromeDriver();
+        driver2.manage().window().maximize();
+        driver2.get("https://www.seleniumhq.org");
 
-        driver.manage().window().maximize();*/
+        driver1.quit();
+        driver2.quit();
     }
 }
